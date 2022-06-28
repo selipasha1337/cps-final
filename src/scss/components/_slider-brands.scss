@@ -1,0 +1,14 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+
+.slider-brands {
+
+  @include media(size-medium) {
+    display: none;
+  }
+
+  .swiper-slide {
+    height: 72px;
+    width: 100%;
+  }
+}

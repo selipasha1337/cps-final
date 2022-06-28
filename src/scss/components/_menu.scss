@@ -1,0 +1,50 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+
+.menu {
+  &__list {
+    display: flex;
+    margin-top: 24px;
+    margin-left: 16px;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    @include media(size-mobile) {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    @include media(size-medium) {
+      margin-left: 24px;
+    }
+
+    @include media(size-desktop) {
+      margin-left: 34px;
+      overflow-x: initial;
+      flex-wrap: wrap;
+      white-space: normal;
+    }
+  }
+
+  &__button {
+    padding: 8px 16px;
+    color: $color-text-grey;
+    background: none;
+    border: 2px solid transparent;
+    transition: .3s;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+
+  &__button--active,
+  &__button:hover,
+  &__button:active,
+  &__button:focus {
+    background:$color-background-white;
+    border: 2px solid #B8FFEC;
+  }
+}

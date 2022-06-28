@@ -1,0 +1,29 @@
+@import "../abstracts/colors";
+
+body {
+  font-family: "TT Lakes", sans-serif;
+  background: $color-background;
+  color: $color-text-black;
+}
+
+a {
+  color: $color-text-black;
+}
+
+span {
+  color: $color-text-black;
+}
+
+p {
+  color: $color-text-black;
+}
+
+h1 {
+  color: $color-text-black;
+  font-weight: 700;
+}
+
+h2 {
+  color: $color-text-grey;
+  font-weight: 400;
+}

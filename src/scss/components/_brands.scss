@@ -1,0 +1,56 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+
+.brands {
+  margin-top: 16px;
+  margin-left: 16px;
+
+  @include media(size-medium) {
+    margin-top: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  @include media(size-desktop) {
+    margin-left: 34px;
+    margin-right: 34px;
+  }
+
+  &__button {
+    margin-top: 24px;
+    transition: transform .3s;
+    &::before {
+      transition: transform .3s;
+    }
+  }
+
+  &__button--clicked {
+    &::before {
+      transform: rotate(-180deg);
+    }
+  }
+
+
+  &__list-wrapper {
+    display: none;
+    @include media(size-medium) {
+      display: block;
+    }
+  }
+
+  &__list {
+
+    @include media(size-medium) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @include media(size-desktop-extra) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+  }
+
+
+}

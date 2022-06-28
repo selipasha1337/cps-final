@@ -1,0 +1,19 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+
+.heading {
+  color: $color-text-grey;
+  font-weight: 400;
+  padding: 16px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: $gradient-heading-1;
+  @include media(size-medium) {
+    padding: 16px 24px;
+    background: $gradient-heading-2;
+  }
+  @include media(size-desktop) {
+    padding: 16px 32px;
+    background: $gradient-heading-1;
+  }
+}

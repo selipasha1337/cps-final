@@ -1,0 +1,18 @@
+@import "../abstracts/colors";
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: $color-background-white;
+  mix-blend-mode: normal;
+  opacity: 0;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.overlay--show {
+  visibility: visible;
+  transition: visible .5s;
+  opacity: 0.96;
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport'
+        content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<div class='overlay'></div>
+<div class='wrapper'>
+  <aside class='sidebar'>
+    <div class='sidebar__container'>
+      <div class='sidebar__navigation-block'>
+        <header class='sidebar__header'>
+          <button class='main-button sidebar__header-button' id='menuCloseButton'>
+            <i class='main-icon main-icon--filled'>
+              <img src='src/img/close.svg' alt='Закрыть' class='main-icon__img'>
+            </i>
+          </button>
+          <button class='main-button sidebar__header-button'>
+            <span class='logo'>
+            <img src='src/img/logo.svg' alt='Логотип' class='logo__img'>
+          </span>
+          </button>
+          <button class='main-button sidebar__header-button'>
+            <i class='main-icon main-icon--filled'>
+              <img src='src/img/search-nav.svg' alt='Поиск' class='main-icon__img'>
+            </i>
+          </button>
+        </header>
+        <nav class='sidebar__navigation'>
+          <ul class='sidebar__list'>
+            <li class='sidebar__item'>
+              <a href='' class='sidebar__link sidebar__link--active'>Ремонт техники</a>
+            </li>
+            <li class='sidebar__item'>
+              <a href='' class='sidebar__link'>Услуги и сервисы</a>
+            </li>
+            <li class='sidebar__item'>
+              <a href='' class='sidebar__link'>Корпоративным клиентам</a>
+            </li>
+            <li class='sidebar__item'>
+              <a href='' class='sidebar__link'>Продавцам техники</a>
+            </li>
+            <li class='sidebar__item'>
+              <a href='' class='sidebar__link'>Партнерам</a>
+            </li>
+            <li class='sidebar__item'>
+              <a href='' class='sidebar__link'>Производителям</a>
+            </li>
+            <li class='sidebar__item'>
+              <a href='' class='sidebar__link'>Наши сервисные центры</a>
+            </li>
+            <li class='sidebar__item'>
+              <a href='' class='sidebar__link'>Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class='sidebar__navigation-block'>
+        <footer class='sidebar__footer'>
+          <ul class='sidebar__footer-icons'>
+            <li class='sidebar__footer-icon'>
+              <button class='main-button sidebar__footer-button'>
+                <i class='main-icon main-icon--filled'>
+                  <img src='src/img/phone.svg' alt='Телефон' class='main-icon__img'>
+                </i>
+              </button>
+            </li>
+            <li class='sidebar__footer-icon'>
+              <button class='main-button sidebar__footer-button'>
+                <i class='main-icon main-icon--filled'>
+                  <img src='src/img/message.svg' alt='Сообщение' class='main-icon__img'>
+                </i>
+              </button>
+            </li>
+            <li class='sidebar__footer-icon'>
+              <button class='main-button sidebar__footer-button'>
+                <i class='main-icon main-icon--filled'>
+                  <img src='src/img/profile.svg' alt='Профиль' class='main-icon__img'>
+                </i>
+              </button>
+            </li>
+          </ul>
+          <a href='mailto:mail@cps.com' class='sidebar__email'>mail@cps.com</a>
+          <a href='tel:88008908900' class='sidebar__phone'>8 800 890 8900</a>
+          <ul class='sidebar__languages'>
+            <li class='sidebar__language-item'>
+              <button class='sidebar__language sidebar__language--active'>RU</button>
+            </li>
+            <li class='sidebar__language-item'>
+              <button class='sidebar__language'>EN</button>
+            </li>
+            <li class='sidebar__language-item'>
+              <button class='sidebar__language'>CH</button>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </aside>
+  <main class='main'>
+    <header class='header'>
+      <div class='header__content'>
+        <div class='header__actions'>
+          <div class='header__item'>
+            <button class='main-button' id='mainButtonMenu'>
+              <i class='main-icon main-icon--filled'>
+                <img src='src/img/menu.svg' alt='Меню' class='main-icon__img'>
+              </i>
+            </button>
+          </div>
+          <div class='header__item'>
+            <button class='main-button'>
+              <img src='src/img/logo.svg' alt='Логотип' class='main-icon__img'>
+            </button>
+          </div>
+        </div>
+        <div class='header__wrapper'>
+          <div class='header__actions'>
+            <div class='header__item'>
+              <button class='main-button'>
+                <i class='main-icon main-icon--filled'>
+                  <img src='src/img/phone.svg' alt='Поиск' class='main-icon__img'>
+                </i>
+              </button>
+            </div>
+            <div class='header__item'>
+              <button class='main-button'>
+                <i class='main-icon main-icon--filled'>
+                  <img src='src/img/message.svg' alt='Сообщение' class='main-icon__img'>
+                </i>
+              </button>
+            </div>
+            <div class='header__item'>
+              <button class='main-button'>
+                <i class='main-icon main-icon--filled'>
+                  <img src='src/img/profile.svg' alt='Профиль' class='main-icon__img'>
+                </i>
+              </button>
+            </div>
+          </div>
+          <div class='header__actions'>
+            <div class='header__item'>
+              <button class='main-button'>
+                <span class='main-button__text header__button-text'>Оставить заявку</span>
+                <i class='main-icon main-icon--filled'>
+                  <img src='src/img/settings.svg' alt='Настройки' class='main-icon__img'>
+                </i>
+              </button>
+            </div>
+            <div class='header__item'>
+              <button class='main-button'>
+                <span class='main-button__text header__button-text'>Статус ремонта</span>
+                <i class='main-icon main-icon--filled'>
+                  <img src='src/img/search.svg' alt='Поиск' class='main-icon__img'>
+                </i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='header__title'>
+        <h1 class='main-title'>Услуги и сервисы</h1>
+      </div>
+    </header>
+    <nav class='menu'>
+      <ul class='menu__list'>
+        <li class='menu__item'>
+          <button class='menu__button menu__button--active'>Ремонтируемые устройства</button>
+        </li>
+        <li class='menu__item'>
+          <button class='menu__button'>Дополнительные услуги</button>
+        </li>
+        <li class='menu__item'>
+          <button class='menu__button'>Ремонтируемые устройства</button>
+        </li>
+        <li class='menu__item'>
+          <button class='menu__button'>Цены на услуги</button>
+        </li>
+        <li class='menu__item'>
+          <button class='menu__button'>Адреса сервисных центров</button>
+        </li>
+        <li class='menu__item'>
+          <button class='menu__button'>Специальные цены</button>
+        </li>
+        <li class='menu__item'>
+          <button class='menu__button'>Отзывы</button>
+        </li>
+      </ul>
+    </nav>
+    <section class='about'>
+      <div class='about__item'>
+        <p class='about__p'>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+          отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+        <p class='about__p'>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает
+          большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+          очередь,
+          советуют нас родным и близким.</p>
+        <button class='more about__button'>Читать далее</button>
+      </div>
+      <div class='about__item'>
+        <div class='about__image-container'>
+          <img src='src/img/cpspic.jpg' alt='О CPS' class='about__image'>
+        </div>
+      </div>
+    </section>
+    <section class='services'>
+      <h2 class='heading services__title'>Ремонт техники различных брендов</h2>
+      <div class='brands'>
+        <div class='brands__list-wrapper'>
+          <div class='brands__list'>
+            <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/lenovo.png' alt='Lenovo' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+            </button>
+            <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/samsung.png' alt='Samsung' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+            </button>
+            <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/apple.png' alt='Apple' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+            </button>
+            <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/viewsonic.png' alt='ViewSonic' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+            </button>
+            <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/bosch.png' alt='Bosch' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+            </button>
+            <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/hp.png' alt='HP' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+            </button>
+            <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/acer.png' alt='Acer' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+            </button>
+            <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/sony.png' alt='Sony' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+            </button>
+            <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/lenovo.png' alt='Lenovo' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+            </button>
+          </div>
+          <button class='more brands__button'>Показать все</button>
+        </div>
+        <div class='swiper slider-brands'>
+          <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+              <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/lenovo.png' alt='Lenovo' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+              </button>
+            </div>
+            <div class='swiper-slide'>
+              <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/samsung.png' alt='Samsung' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+              </button>
+            </div>
+            <div class='swiper-slide'>
+              <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/apple.png' alt='Apple' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+              </button>
+            </div>
+            <div class='swiper-slide'>
+              <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/viewsonic.png' alt='ViewSonic' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+              </button>
+            </div>
+            <div class='swiper-slide'>
+              <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/bosch.png' alt='Bosch' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+              </button>
+            </div>
+            <div class='swiper-slide'>
+              <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/hp.png' alt='HP' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+              </button>
+            </div>
+            <div class='swiper-slide'>
+              <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/acer.png' alt='Acer' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+              </button>
+            </div>
+            <div class='swiper-slide'>
+              <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/sony.png' alt='Sony' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+              </button>
+            </div>
+            <div class='swiper-slide'>
+              <button type='button' class='brand'>
+                <span class='brand__container'>
+                  <img src='src/img/lenovo.png' alt='Lenovo' class='brand__image'>
+                  <i class='main-icon'>
+                    <img src='src/img/arrow.svg' alt='Поиск' class='main-icon__img'>
+                  </i>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class='swiper-pagination'></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+@import "../abstracts/mixins";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  min-height: 100vh;
+  @include media(size-mobile) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+

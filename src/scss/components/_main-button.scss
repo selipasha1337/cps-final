@@ -1,0 +1,21 @@
+@import "../abstracts/colors";
+
+.main-button {
+  display: flex;
+  align-items: center;
+  transition: .4s;
+
+  &:hover .main-button__text {
+    color: $color-text-grey;
+  }
+
+  &:hover .main-icon {
+    opacity: .8;
+  }
+
+  &__text {
+    margin-right: 9px;
+    font-weight: 500;
+    transition: .4s;
+  }
+}

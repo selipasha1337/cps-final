@@ -1,0 +1,23 @@
+@mixin media($size) {
+  @if $size == size-mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if ($size == size-mobile-wide) {
+    @media (min-width: 360px) {
+      @content;
+    }
+  } @else if $size == size-medium {
+    @media (min-width: 767px) {
+      @content;
+    }
+  } @else if $size == size-desktop {
+    @media (min-width: 1120px) {
+      @content;
+    }
+  } @else if $size == size-desktop-extra {
+    @media (min-width: 1366px) {
+      @content;
+    }
+  }
+}

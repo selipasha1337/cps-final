@@ -1,0 +1,16 @@
+@import "../abstracts/colors";
+
+body, {
+  background: $color-background;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+

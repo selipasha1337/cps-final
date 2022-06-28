@@ -1,0 +1,20 @@
+@import "../abstracts/colors";
+
+.main-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid $color-btn;
+  transition: .4s;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.main-icon--filled {
+  background: $color-btn;
+}

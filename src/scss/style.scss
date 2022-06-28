@@ -1,0 +1,28 @@
+@import 'base/reset';
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/typography';
+
+@import '../../node_modules/swiper/swiper.scss';
+@import "vendors/swiper";
+
+@import "layout/wrapper";
+@import "layout/main";
+@import "layout/header";
+@import "layout/sidebar";
+
+@import 'components/main-button';
+@import 'components/main-icon';
+@import 'components/main-title';
+
+@import "components/overlay";
+@import "components/menu";
+@import "components/about";
+@import "components/more";
+@import "components/heading";
+@import "components/services";
+@import "components/brands";
+@import "components/brand";
+
+@import "components/slider-brands";
+
