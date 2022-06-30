@@ -1,0 +1,47 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+
+.repairs {
+
+  &__list-wrapper {
+    display: none;
+    @include media(size-medium) {
+      display: block;
+      margin: 24px 24px 0 24px;
+    }
+
+    @include media(size-desktop) {
+      display: block;
+      margin: 24px 34px 0 34px;
+    }
+  }
+
+  &__list {
+
+    @include media(size-medium) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @include media(size-desktop-extra) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+  }
+
+  &__button {
+    margin-top: 24px;
+    transition: transform .3s;
+
+    &::before {
+      transition: transform .3s;
+    }
+  }
+
+  &__button--clicked {
+    &::before {
+      transform: rotate(-180deg);
+    }
+  }
+}

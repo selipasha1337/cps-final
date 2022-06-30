@@ -8,11 +8,14 @@
   font-size: 1rem;
   text-transform: uppercase;
   background: $gradient-heading-1;
+  margin-top: 24px;
   @include media(size-medium) {
+    margin-top: 32px;
     padding: 16px 24px;
     background: $gradient-heading-2;
   }
   @include media(size-desktop) {
+    margin-top: 50px;
     padding: 16px 32px;
     background: $gradient-heading-1;
   }

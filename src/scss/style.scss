@@ -12,6 +12,8 @@
 @import "layout/sidebar";
 
 @import 'components/main-button';
+@import 'components/rounded-button';
+
 @import 'components/main-icon';
 @import 'components/main-title';
 
@@ -20,9 +22,15 @@
 @import "components/about";
 @import "components/more";
 @import "components/heading";
-@import "components/services";
 @import "components/brands";
 @import "components/brand";
+@import "components/repairs";
+@import "components/repair";
+@import "components/price";
 
 @import "components/slider-brands";
+@import "components/slider-repairs";
+@import "components/slider-prices";
+
+@import "components/prices-table";
 

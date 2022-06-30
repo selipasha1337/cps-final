@@ -1,0 +1,31 @@
+@import "../abstracts/colors";
+
+.rounded-button {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 700;
+  color: $color-background-white;
+  background: $color-btn;
+  padding-right: 27px;
+  padding-left: 12px;
+  border-radius: 16px;
+  height: 32px;
+  transition: .3s;
+  font-size: 0.75rem;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    background: url("../img/arrow-white.svg") no-repeat;
+    position: absolute;
+    width: 8px;
+    height: 11px;
+    right: 0;
+    padding-right: 16px;
+  }
+}

@@ -25,12 +25,14 @@
     min-width: 306px;
     opacity: 1;
     transform: translateX(0);
-    position: static;
+    position: relative;
   }
 
   &__container {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    width: 100%;
   }
 
   &__header {
