@@ -2,18 +2,19 @@
 @import "../abstracts/mixins";
 
 .sidebar {
-  min-width: 100%;
-  flex: 0 0 auto;
-  overflow: auto;
-  height: 100%;
+  width: 306px;
+  height: 100vh;
   transform: translateX(-100%);
   position: fixed;
   transition: transform 1s, box-shadow 2s;
-  z-index: 2;
+  top: 0;
+  left: 0;
+  overflow: auto;
   background: $color-background-white;
+  z-index: 10;
 
   @include media(size-mobile) {
-    height: 100vh;
+    min-width: 100%;
   }
 
   @include media(size-medium) {
@@ -25,14 +26,15 @@
     min-width: 306px;
     opacity: 1;
     transform: translateX(0);
-    position: relative;
   }
 
   &__container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     width: 100%;
+    height: 100%;
   }
 
   &__header {
@@ -200,7 +202,6 @@
 .sidebar--show {
   box-shadow: $shadow-nav;
   transform: translateX(0);
-  position: static;
   @include media(size-medium) {
     position: fixed;
   }

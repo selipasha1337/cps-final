@@ -1,0 +1,62 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+
+.footer {
+  padding-bottom: 19px;
+
+  &__container {
+    display: block;
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-top: 57px;
+    margin-left: 16px;
+    margin-right: 16px;
+
+    @include media(size-medium) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 80px;
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+
+    @include media(size-desktop) {
+      margin-top: 83px;
+      margin-left: 32px;
+      margin-right: 32px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    margin-bottom: 16px;
+
+    @include media(size-medium) {
+      &:first-child {
+        text-align: left;
+      }
+
+      &:last-child {
+        margin: 0;
+        text-align: right;
+        width: 330px;
+      }
+    }
+  }
+
+  &__text {
+    color: $color-text-grey;
+  }
+  &__link {
+    color: $color-text-grey;
+    transition: .3s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+}
+
+

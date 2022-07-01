@@ -1,0 +1,86 @@
+@import "../abstracts/colors";
+@import "../abstracts/mixins";
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  transform: translateX(115%);
+  transition: transform 1s;
+
+  &__wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: auto;
+    z-index: 5;
+    background: $color-background-white;
+    transition: transform 1s;
+
+    @include media(size-medium) {
+      box-shadow: $shadow-nav;
+      width: 440px;
+    }
+  }
+
+  &__content {
+    position: fixed;
+    padding: 16px 16px 24px;
+
+    @include media(size-medium) {
+      padding: 32px 32px 24px;
+    }
+  }
+
+  &__close {
+    margin-top: 24px;
+    margin-left: 16px;
+
+    @include media(size-medium) {
+      position: absolute;
+      top: 4px;
+      left: -72px;
+      z-index: 5;
+    }
+  }
+
+  &__title {
+    margin-top: 32px;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 19px;
+    @include media(size-medium) {
+      margin-top: 23px;
+    }
+  }
+
+  &__text {
+    margin-top: 16px;
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+
+  &__link {
+    display: inline-block;
+    color: $color-btn;
+  }
+
+
+  &__input {
+    margin-bottom: 16px;
+  }
+
+  &__textarea {
+    height: 118px;
+  }
+
+
+}
+
+.modal--show {
+  transition: 1s;
+  transform: translateX(0);
+}

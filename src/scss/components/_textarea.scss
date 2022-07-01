@@ -1,0 +1,17 @@
+@import "../abstracts/colors";
+
+.textarea {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid $color-border;
+  font-weight: 500;
+
+  &::placeholder {
+    color: $color-placeholder;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid #7E7E82;
+  }
+}

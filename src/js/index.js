@@ -99,118 +99,132 @@ document.addEventListener('DOMContentLoaded', function() {
     brand[i].classList.add('brand--hidden')
   }
 
-})
-
 
 // Ремонт
 
-const repairArrow = document.querySelector('#showAllRepairs')
-const repairs = document.querySelector('.repairs__list')
-const repair = repairs.children
-let REPAIRS_RANGE = 3
+  const repairArrow = document.querySelector('#showAllRepairs')
+  const repairs = document.querySelector('.repairs__list')
+  const repair = repairs.children
+  let REPAIRS_RANGE = 3
 
-const repairsResize = function(width) {
-  if (width >= 1366) {
-    REPAIRS_RANGE = 4
-  }
-}
-
-const showMoreRepairs = function() {
-  this.classList.toggle('repairs__button--clicked')
-
-  for (let i = 0; i < repair.length - REPAIRS_RANGE; i++) {
-    repair[i + REPAIRS_RANGE].classList.toggle('repair--hidden')
+  const repairsResize = function(width) {
+    if (width >= 1366) {
+      REPAIRS_RANGE = 4
+    }
   }
 
-  this.innerHTML = this.innerHTML === 'Показать все' ? 'Скрыть' : 'Показать все'
-}
+  const showMoreRepairs = function() {
+    this.classList.toggle('repairs__button--clicked')
 
-repairsResize(document.documentElement.clientWidth || document.body.clientWidth)
+    for (let i = 0; i < repair.length - REPAIRS_RANGE; i++) {
+      repair[i + REPAIRS_RANGE].classList.toggle('repair--hidden')
+    }
 
-repairArrow.addEventListener('click', showMoreRepairs)
+    this.innerHTML = this.innerHTML === 'Показать все' ? 'Скрыть' : 'Показать все'
+  }
 
-for (let i = repair.length - 1; i >= REPAIRS_RANGE; i--) {
-  repair[i].classList.add('repair--hidden')
-}
+  repairsResize(document.documentElement.clientWidth || document.body.clientWidth)
+
+  repairArrow.addEventListener('click', showMoreRepairs)
+
+  for (let i = repair.length - 1; i >= REPAIRS_RANGE; i--) {
+    repair[i].classList.add('repair--hidden')
+  }
 
 
 // Слайдер ремонт
 
-const sliderRepairs = function() {
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    const swiper = new Swiper('.slider-repairs', {
-      slidesPerView: 1.2,
-      loop: true,
-      spaceBetween: 16,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      init: true,
-      breakpoints: {
-        376: {
-          slidesPerView: 1.5
+  const sliderRepairs = function() {
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      const swiper = new Swiper('.slider-repairs', {
+        slidesPerView: 1.2,
+        loop: true,
+        spaceBetween: 16,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
         },
-        456: {
-          slidesPerView: 1.8
-        },
-        555: {
-          slidesPerView: 2
-        },
-        593: {
-          slidesPerView: 2.3
-        },
-        667: {
-          slidesPerView: 2.6
-        },
-        768: {
-          slidesPerView: 3
+        init: true,
+        breakpoints: {
+          376: {
+            slidesPerView: 1.5
+          },
+          456: {
+            slidesPerView: 1.8
+          },
+          555: {
+            slidesPerView: 2
+          },
+          593: {
+            slidesPerView: 2.3
+          },
+          667: {
+            slidesPerView: 2.6
+          },
+          768: {
+            slidesPerView: 3
+          }
         }
-      }
-    })
+      })
+    }
   }
-}
 
-sliderRepairs()
+  sliderRepairs()
 
 // Слайдер ремонт
 
-const sliderPrices = function() {
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    const swiper = new Swiper('.slider-prices', {
-      slidesPerView: 1.2,
-      loop: true,
-      spaceBetween: 16,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      init: true,
-      breakpoints: {
-        376: {
-          slidesPerView: 1.5
+  const sliderPrices = function() {
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      const swiper = new Swiper('.slider-prices', {
+        slidesPerView: 1.2,
+        loop: true,
+        spaceBetween: 16,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
         },
-        456: {
-          slidesPerView: 1.8
-        },
-        555: {
-          slidesPerView: 2
-        },
-        593: {
-          slidesPerView: 2.3
-        },
-        667: {
-          slidesPerView: 2.6
-        },
-        768: {
-          slidesPerView: 3
+        init: true,
+        breakpoints: {
+          376: {
+            slidesPerView: 1.5
+          },
+          456: {
+            slidesPerView: 1.8
+          },
+          555: {
+            slidesPerView: 2
+          },
+          593: {
+            slidesPerView: 2.3
+          },
+          667: {
+            slidesPerView: 2.6
+          },
+          768: {
+            slidesPerView: 3
+          }
         }
-      }
-    })
+      })
+    }
   }
-}
 
-sliderPrices()
+  sliderPrices()
+
+// Обратная связь
+
+  const feedbackButton = document.querySelectorAll('.feedbackButton')
+  const modalClose = document.querySelector('.modalClose')
+  const feedbackModal = document.querySelector('#feedbackModal')
+
+  feedbackButton.forEach(function(item) {
+    item.addEventListener('click', function() {
+      feedbackModal.classList.toggle('modal--show')
+    })
+  })
+
+  modalClose.addEventListener('click', function() {
+    feedbackModal.classList.remove('modal--show')
+  })
 
 
-
+})

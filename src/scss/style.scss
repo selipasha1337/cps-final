@@ -10,6 +10,7 @@
 @import "layout/main";
 @import "layout/header";
 @import "layout/sidebar";
+@import "layout/footer";
 
 @import 'components/main-button';
 @import 'components/rounded-button';
@@ -17,20 +18,27 @@
 @import 'components/main-icon';
 @import 'components/main-title';
 
-@import "components/overlay";
+@import "components/modal";
 @import "components/menu";
 @import "components/about";
 @import "components/more";
+@import "components/overlay";
 @import "components/heading";
 @import "components/brands";
 @import "components/brand";
 @import "components/repairs";
 @import "components/repair";
+@import "components/prices";
 @import "components/price";
+
+@import "components/input";
+@import "components/textarea";
 
 @import "components/slider-brands";
 @import "components/slider-repairs";
 @import "components/slider-prices";
 
 @import "components/prices-table";
+
+
 

@@ -1,4 +1,11 @@
+@import "../abstracts/mixins";
+
 .main {
-  width: 100%;
+  margin: 0;
+  transition: 1s;
   z-index: 0;
+
+  @include media(size-desktop) {
+    margin-left: 306px;
+  }
 }
