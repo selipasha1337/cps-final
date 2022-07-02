@@ -12,28 +12,67 @@ document.addEventListener('DOMContentLoaded', function() {
   const overlay = document.querySelector('.overlay')
   const body = document.querySelector('body')
 
+  const messageButton = document.querySelectorAll('.message-button')
+  const phoneButton = document.querySelectorAll('.phone-button')
+  const modalCloseButton = document.querySelectorAll('.modal__close')
+
+  const modalMessage = document.querySelector('#modalMessage')
+  const modalPhone = document.querySelector('#modalPhone')
+
+
+  modalCloseButton.forEach(function(item) {
+    item.addEventListener('click', function() {
+      toggleElement(modalMessage, 'modal--show')
+      toggleElement(modalPhone, 'modal--show')
+      body.classList.remove('no-scroll')
+    })
+  })
+
+  messageButton.forEach(function(item) {
+    item.addEventListener('click', function() {
+      modalMessage.classList.toggle('modal--show')
+      overlay.classList.toggle('overlay--show')
+      body.classList.remove('no-scroll')
+    })
+  })
+
+  phoneButton.forEach(function(item) {
+    item.addEventListener('click', function() {
+      modalPhone.classList.toggle('modal--show')
+      overlay.classList.toggle('overlay--show')
+      body.classList.remove('no-scroll')
+    })
+  })
+
+  const toggleElement = function(elem, activeClass) {
+    if (elem.classList.contains(activeClass)) {
+      elem.classList.remove(activeClass)
+      overlay.classList.toggle('overlay--show')
+      body.classList.remove('no-scroll')
+    }
+  }
+
+
+  const clearOverlay = function() {
+    toggleElement(sidebar, 'sidebar--show')
+    toggleElement(modalMessage, 'modal--show')
+    toggleElement(modalPhone, 'modal--show')
+  }
+
   const toggleMenu = function() {
     sidebar.classList.toggle('sidebar--show')
     overlay.classList.toggle('overlay--show')
     body.classList.toggle('no-scroll')
   }
 
-  const resetMenu = function() {
-    if (this.matchMedia('(min-width: 1120px)').matches) {
-      sidebar.classList.remove('sidebar--show')
-      overlay.classList.remove('overlay--show')
-      body.classList.remove('no-scroll')
-    }
-  }
 
+  overlay.addEventListener('click', clearOverlay)
   menuButton.addEventListener('click', toggleMenu)
   menuCloseButton.addEventListener('click', toggleMenu)
-  overlay.addEventListener('click', toggleMenu)
-  window.addEventListener('resize', resetMenu)
+
 
 
   // Слайдер бренды
-
   const sliderBrands = function() {
     if (window.matchMedia('(max-width: 767px)').matches) {
       const swiper = new Swiper('.slider-brands', {
@@ -69,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
   sliderBrands()
 
   // Бренды
-
   const brandArrow = document.querySelector('#showAllBrands')
   const brands = document.querySelector('.brands__list')
   const brand = brands.children
@@ -209,22 +247,5 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   sliderPrices()
-
-// Обратная связь
-
-  const feedbackButton = document.querySelectorAll('.feedbackButton')
-  const modalClose = document.querySelector('.modalClose')
-  const feedbackModal = document.querySelector('#feedbackModal')
-
-  feedbackButton.forEach(function(item) {
-    item.addEventListener('click', function() {
-      feedbackModal.classList.toggle('modal--show')
-    })
-  })
-
-  modalClose.addEventListener('click', function() {
-    feedbackModal.classList.remove('modal--show')
-  })
-
 
 })

@@ -10,8 +10,8 @@
   top: 0;
   left: 0;
   overflow: auto;
+  z-index: 2;
   background: $color-background-white;
-  z-index: 10;
 
   @include media(size-mobile) {
     min-width: 100%;
@@ -202,6 +202,7 @@
 .sidebar--show {
   box-shadow: $shadow-nav;
   transform: translateX(0);
+  z-index: 10;
   @include media(size-medium) {
     position: fixed;
   }

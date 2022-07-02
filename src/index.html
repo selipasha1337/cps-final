@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class='modal'>
+<div class='modal' id='modalMessage'>
   <div class='modal__wrapper'>
     <button class='main-button modal__close'>
       <i class='main-icon main-icon--filled'>
@@ -23,6 +23,28 @@
         <input type='tel' class='input modal__input' placeholder='Телефон'>
         <input type='email' class='input modal__input' placeholder='Телефон'>
         <textarea class='textarea modal__textarea' placeholder='Сообщение'></textarea>
+        <p class='modal__text'>Нажимая “отправить”, вы даете согласие на <a class='modal__link'>обработку персональных
+          данных</a> и соглашаетесь с нашей <a class='modal__link'>политикой
+          конфиденциальности</a></p>
+        <div class='modal__button-container'>
+          <button class='rounded-button modal__button'>Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class='modal' id='modalPhone'>
+  <div class='modal__wrapper'>
+    <button class='main-button modal__close'>
+      <i class='main-icon main-icon--filled'>
+        <img src='src/img/close.svg' alt='Закрыть' class='main-icon__img'>
+      </i>
+    </button>
+    <h1 class='main-title modal__title'>Заказать звонок</h1>
+    <div class='modal__content'>
+      <form>
+        <input type='tel' class='input modal__input' placeholder='Телефон'>
         <p class='modal__text'>Нажимая “отправить”, вы даете согласие на <a class='modal__link'>обработку персональных
           данных</a> и соглашаетесь с нашей <a class='modal__link'>политикой
           конфиденциальности</a></p>
@@ -88,14 +110,14 @@
       <footer class='sidebar__footer'>
         <ul class='sidebar__footer-icons'>
           <li class='sidebar__footer-icon'>
-            <button class='main-button sidebar__footer-button'>
+            <button class='main-button sidebar__footer-button phone-button'>
               <i class='main-icon main-icon--filled'>
                 <img src='src/img/phone.svg' alt='Телефон' class='main-icon__img'>
               </i>
             </button>
           </li>
           <li class='sidebar__footer-icon'>
-            <button class='main-button sidebar__footer-button'>
+            <button class='main-button sidebar__footer-button message-button'>
               <i class='main-icon main-icon--filled'>
                 <img src='src/img/message.svg' alt='Сообщение' class='main-icon__img'>
               </i>
@@ -146,14 +168,14 @@
       <div class='header__wrapper'>
         <div class='header__actions'>
           <div class='header__item'>
-            <button class='main-button'>
+            <button class='main-button phone-button'>
               <i class='main-icon main-icon--filled'>
-                <img src='src/img/phone.svg' alt='Поиск' class='main-icon__img'>
+                <img src='src/img/phone.svg' alt='Телефон' class='main-icon__img'>
               </i>
             </button>
           </div>
           <div class='header__item'>
-            <button class='main-button'>
+            <button class='main-button message-button'>
               <i class='main-icon main-icon--filled'>
                 <img src='src/img/message.svg' alt='Сообщение' class='main-icon__img'>
               </i>
