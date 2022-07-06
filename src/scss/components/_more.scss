@@ -16,5 +16,12 @@
     width: 8px;
     height: 11px;
     left: 0;
+    transition: .5s;
+  }
+}
+
+.more--clicked {
+  &::before {
+    transform: rotate(-180deg);
   }
 }

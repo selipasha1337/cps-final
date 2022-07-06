@@ -5,6 +5,8 @@ Swiper.use([Pagination])
 
 document.addEventListener('DOMContentLoaded', function() {
 
+  const MOBILE = window.matchMedia('(max-width: 767px)')
+
   // Меню
   const menuButton = document.querySelector('#mainButtonMenu')
   const menuCloseButton = document.querySelector('#menuCloseButton')
@@ -18,6 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const modalMessage = document.querySelector('#modalMessage')
   const modalPhone = document.querySelector('#modalPhone')
+  const aboutText = document.querySelector('.about__p:last-of-type')
+
+  const input = document.querySelector('.modal__input')
+
+  const aboutButton = document.querySelector('#aboutButton')
+
+  const toggleText = () => {
+    aboutText.classList.toggle('about__p--show')
+    aboutButton.innerHTML = aboutButton.innerHTML === 'Читать далее' ? 'Скрыть' : 'Читать далее'
+    aboutButton.classList.toggle('more--clicked')
+  }
+
+  aboutButton.addEventListener('click', toggleText)
 
 
   modalCloseButton.forEach(function(item) {
@@ -25,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleElement(modalMessage, 'modal--show')
       toggleElement(modalPhone, 'modal--show')
       body.classList.remove('no-scroll')
+      toggleElement(sidebar, 'sidebar--show')
     })
   })
 
@@ -33,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
       modalMessage.classList.toggle('modal--show')
       overlay.classList.toggle('overlay--show')
       body.classList.remove('no-scroll')
+      toggleElement(sidebar, 'sidebar--show')
+      document.querySelector('#modalMessage .modal__input').focus()
     })
   })
 
@@ -41,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
       modalPhone.classList.toggle('modal--show')
       overlay.classList.toggle('overlay--show')
       body.classList.remove('no-scroll')
+      toggleElement(sidebar, 'sidebar--show')
+      document.querySelector('#modalPhone .modal__input').focus()
     })
   })
 
@@ -59,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleElement(modalPhone, 'modal--show')
   }
 
-  const toggleMenu = function() {
+  const toggleMenu = () => {
     sidebar.classList.toggle('sidebar--show')
     overlay.classList.toggle('overlay--show')
     body.classList.toggle('no-scroll')
@@ -70,11 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
   menuButton.addEventListener('click', toggleMenu)
   menuCloseButton.addEventListener('click', toggleMenu)
 
-
-
   // Слайдер бренды
   const sliderBrands = function() {
-    if (window.matchMedia('(max-width: 767px)').matches) {
+    if (MOBILE.matches) {
       const swiper = new Swiper('.slider-brands', {
         slidesPerView: 1.2,
         loop: true,
@@ -173,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Слайдер ремонт
 
   const sliderRepairs = function() {
-    if (window.matchMedia('(max-width: 767px)').matches) {
+    if (MOBILE.matches) {
       const swiper = new Swiper('.slider-repairs', {
         slidesPerView: 1.2,
         loop: true,
@@ -212,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Слайдер ремонт
 
   const sliderPrices = function() {
-    if (window.matchMedia('(max-width: 767px)').matches) {
+    if (MOBILE.matches) {
       const swiper = new Swiper('.slider-prices', {
         slidesPerView: 1.2,
         loop: true,

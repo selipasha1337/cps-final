@@ -36,8 +36,12 @@
     margin-bottom: 16px;
     color: $color-text-black;
 
+
     &:last-of-type {
       margin-bottom: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: 1s;
     }
   }
 
@@ -57,4 +61,10 @@
       height: 307px;
     }
   }
+}
+
+.about__p--show {
+  max-height: 100% !important;
+  overflow: initial;
+  transition: 1s;
 }
